@@ -3,14 +3,8 @@ import { StyleSheet, View, Text, Image } from 'react-native';
 
 export default class CartIndex extends React.Component {
   static navigationOptions ={
-    title: '购物车',
-    tabBarLabel: '购物车',
-    tabBarIcon: ({ tintColor }) => (
-      <Image
-        source={require('../../common/img/homepage.png')}
-        style={[styles.icon, {tintColor: tintColor}]}
-      />
-    ),
+    title: '内页',
+    headerRight: <View/>
   };
 
   render() {
@@ -19,9 +13,5 @@ export default class CartIndex extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  icon: {
-    marginTop: -6,
-    width: 25,
-    height: 25,
-  },
+  
 });

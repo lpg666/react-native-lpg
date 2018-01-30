@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { View, Text, Button } from 'react-native';
+import { StyleSheet, View, Text, Button, Image } from 'react-native';
 
 export default class HomeIndex extends React.Component {
   static navigationOptions = {
-    tabBarLabel: 'Home',
+    title: '首页',
+    tabBarLabel: '首页',
     tabBarIcon: ({ tintColor }) => (
       <Image
         source={require('../../common/img/homepage.png')}
@@ -18,10 +19,18 @@ export default class HomeIndex extends React.Component {
       <View>
         <Text>首页</Text>
         <Button
-          onPress={() => navigate('MyIndex')}
-          title="go MyIndex"
+          onPress={() => navigate('aaa')}
+          title="去内页"
         />
       </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  icon: {
+    marginTop: -6,
+    width: 25,
+    height: 25,
+  },
+});

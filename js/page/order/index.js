@@ -1,8 +1,27 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { StyleSheet, View, Text, Image } from 'react-native';
 
 export default class OrderIndex extends React.Component {
+  static navigationOptions ={
+    title: '订单',
+    tabBarLabel: '订单',
+    tabBarIcon: ({ tintColor }) => (
+      <Image
+        source={require('../../common/img/homepage.png')}
+        style={[styles.icon, {tintColor: tintColor}]}
+      />
+    ),
+  };
+
   render() {
     return <Text>List of all contacts</Text>
   }
 }
+
+const styles = StyleSheet.create({
+  icon: {
+    marginTop: -6,
+    width: 25,
+    height: 25,
+  },
+});

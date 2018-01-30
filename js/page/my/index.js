@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
-import { View, Text, Button } from 'react-native';
+import { StyleSheet, View, Text, Button, Image } from 'react-native';
 
 export default class MyIndex extends React.Component {
   static navigationOptions ={
     title: '我的',
+    tabBarLabel: '我的',
+    tabBarIcon: ({ tintColor }) => (
+      <Image
+        source={require('../../common/img/homepage.png')}
+        style={[styles.icon, {tintColor: tintColor}]}
+      />
+    ),
   };
 
   render() {
@@ -19,3 +26,11 @@ export default class MyIndex extends React.Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  icon: {
+    marginTop: -6,
+    width: 25,
+    height: 25,
+  },
+});
