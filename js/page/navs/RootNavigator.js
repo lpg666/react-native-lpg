@@ -26,14 +26,13 @@ const RootTabs = TabNavigator({
   tabBarOptions: {
     //选中颜色
     activeTintColor: '#333',
-    inactiveTintColor: '#333',
+    inactiveTintColor: '#666',
     indicatorStyle: {
       backgroundColor: '#fff',
     },
     pressOpacity: .9,
     showIcon: true,
     labelStyle: {
-      marginTop: -2,
       fontSize: 12,
     },
     style: {
@@ -61,12 +60,12 @@ const RootNavigator = StackNavigator({
   }
 }, {
   navigationOptions: {
-    headerBackTitle: '',
+    headerBackTitle: null,
     headerStyle: {
-      height: 40,
+      height: 50,
     },
     headerTitleStyle:{
-      fontSize: 16,
+      fontSize: 18,
       alignSelf: 'center',
     }
   }

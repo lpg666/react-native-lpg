@@ -20,7 +20,6 @@ export default class OrderIndex extends React.Component {
 
 const styles = StyleSheet.create({
   icon: {
-    marginTop: -6,
     width: 25,
     height: 25,
   },
